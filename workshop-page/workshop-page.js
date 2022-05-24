@@ -33,7 +33,7 @@ async function displayParticipants() {
         //  </div>
         //</div>
         // for each of this workshop's participants
-        for (let participant of workshop.participant) {
+        for (let participant of workshop.participants) {
             // make an element with the css class 'participant', and put the participants' name in the text content
             const participantDiv = document.createElement('div');
             participantDiv.classList.add('participant');
