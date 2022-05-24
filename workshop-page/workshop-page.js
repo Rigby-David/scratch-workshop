@@ -45,7 +45,7 @@ async function displayParticipants() {
             participantDiv.textContent = participant.name;
             // add an event listener to the participant el. On click, delete the participant, then refetch and redisplay all workshops
             participantDiv.addEventListener('click', async () => {
-                await deleteParticipant();
+                await deleteParticipant(participant.id);
                 displayParticipants();
             });
             // append this participantEl to the participantsEl

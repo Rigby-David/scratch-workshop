@@ -50,7 +50,7 @@ export async function createParticipant(participant) {
 }
 
 export async function deleteParticipant(id) {
-    const response = await client.from('participant').delete().eq('id', id);
+    const response = await client.from('participants').delete().eq('id', id);
 
     return checkError(response);
 }
