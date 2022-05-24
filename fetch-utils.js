@@ -43,7 +43,13 @@ export async function getWorkshops() {
     return checkError(response);
 }
 
-export async function deleteParticipant() {
+export async function createParticipant(participant) {
+    const response = await client.from('participants').insert(participant);
+
+    return checkError(response);
+}
+
+export async function deleteParticipant(id) {
     const response = await client.from('participant').delete().eq('id', id);
 
     return checkError(response);
