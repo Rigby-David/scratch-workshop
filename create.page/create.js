@@ -35,3 +35,5 @@ window.addEventListener('load', async () => {
         selectEl.append(option);
     }
 });
+
+checkAuth();
